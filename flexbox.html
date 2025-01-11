@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .mpd{
+            height: 544px; 
+            width: 100%;
+            border: 6px solid black;
+            display:flex;
+            background-color:lightgrey;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            justify-content: space-evenly;
+            /* align-items: end; */
+         }
+
+         .item{
+            height:200px;
+            width:150px;
+            background-color: rgb(0, 139, 130);
+            border:3px solid darkblue;
+            color:white;
+            margin:10px;
+            padding: 5px;
+
+         }
+         /* #item-1{
+            flex-grow: 4;
+         }
+         #item-2{
+            flex-grow: 3;
+         } */
+         #item-3{
+            /* flex-basis:750px; */
+            /* align-self: flex-end; */
+            align-self: center;
+         }
+
+
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="mpd">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div>  -->
+    </div>
+</body>
+</html>
