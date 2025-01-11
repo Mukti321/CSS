@@ -1,0 +1,58 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Growing and Shrinking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    #text {
+      font-size: 10px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div id="text">TEXT GROWING</div>
+
+<script>
+  let fontSize = 10;
+  let growing = true; // Flag to track if text is growing or shrinking
+  const textElement = document.getElementById("text");
+
+  function adjustFontSize() {
+    if (growing) {
+      fontSize++;
+      textElement.style.color = "red";
+      textElement.innerText = "TEXT GROWING";
+      
+      if (fontSize >= 50) {
+        growing = false; // Switch to shrinking mode
+      }
+    } else {
+      fontSize--;
+      textElement.style.color = "blue";
+      textElement.innerText = "TEXT SHRINKING";
+
+      if (fontSize <= 10) {
+        growing = true; // Switch to growing mode
+      }
+    }
+
+    textElement.style.fontSize = fontSize + "px";
+  }
+
+  setInterval(adjustFontSize, 100); // Adjust font size every 100ms
+</script>
+
+</body>
+</html>

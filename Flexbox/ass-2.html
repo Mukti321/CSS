@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square and Cube Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #333;
+        text-align: center;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Square and Cube of Numbers from 0 to 10</h2>
+    <div id="table-container"></div>
+
+    <script>
+      function generateTable() {
+        // Create a table element
+        const table = document.createElement("table");
+
+        // Add table header
+        const headerRow = document.createElement("tr");
+        const headers = ["Number", "Square", "Cube"];
+        headers.forEach((headerText) => {
+          const th = document.createElement("th");
+          th.innerText = headerText;
+          headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+
+        // Generate rows for numbers 0 to 10
+        for (let i = 0; i <= 10; i++) {
+          const row = document.createElement("tr");
+
+          // Calculate square and cube
+          const square = i * i;
+          const cube = i * i * i;
+
+          // Create cells and append them to the row
+          const numberCell = document.createElement("td");
+          numberCell.innerText = i;
+          const squareCell = document.createElement("td");
+          squareCell.innerText = square;
+          const cubeCell = document.createElement("td");
+          cubeCell.innerText = cube;
+
+          row.appendChild(numberCell);
+          row.appendChild(squareCell);
+          row.appendChild(cubeCell);
+
+          table.appendChild(row);
+        }
+
+        // Append table to the container
+        document.getElementById("table-container").appendChild(table);
+      }
+
+      // Generate the table when the page loads
+      window.onload = generateTable;
+    </script>
+  </body>
+</html>

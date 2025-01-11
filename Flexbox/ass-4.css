@@ -1,0 +1,63 @@
+/* General styling for the XML document */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: whitesmoke;
+  }
+  
+  students {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  student {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  student:hover {
+    background-color: #dbeeff;
+  }
+  
+  student > name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  student > college,
+  student > branch,
+  student > yearOfPassing,
+  student > email {
+    display: block;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  student > college {
+    color: #0056b3;
+  }
+  
+  student > branch {
+    color: #009688;
+  }
+  
+  student > yearOfPassing {
+    color: #e91e63;
+  }
+  
+  student > email {
+    color: #795548;
+    font-style: italic;
+  }
+  

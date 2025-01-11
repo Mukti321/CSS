@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(90deg, rgba(39,202,253,1) 63%, rgba(69,252,216,1) 100%);
+  }
+.main-section{
+      margin-top: 100px;
+      /* width:50%; */
+      border: 2px solid black;
+      padding: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      margin-bottom: 500px;
+
+      background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
+      radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+  }
+  h1{
+    font-weight: bold;
+    font-family: Algerian;
+    font-style: italic;
+    color:black;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    text-decoration: underline;
+
+  }
+  p{
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: white;
+    font-weight:bold;
+    
+
+  }
+  
+  /* column layout property in css */
+  p{
+    /* how many column we want in our webpage */
+    column-count: 4;
+
+    /* we add line between two column.*/
+    column-rule: 3px solid red;
+
+    /* between line and column we need a gap */
+    column-gap: 50px;
+    
+    text-align: justify;
+
+    /* we add a design line just like dotted ,dashed, double etc... */
+    column-rule-style: dotted;
+
+    /* we  give width of line  */
+    column-rule-width: 5px;
+
+
+  }
